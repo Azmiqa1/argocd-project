@@ -1,5 +1,5 @@
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
   name: nginx
   namespace: argocd
@@ -8,17 +8,16 @@ spec:
   source:
     repoURL: https://github.com/Azmiqa1/argo-project.git
     targetRevision: HEAD
-    path: apps
+    path: apps/nginx
   destination:
     server: https://kubernetes.default.svc
     namespace: argoapp
 
- syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
+  syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
 
-    automated:
-      selfHeal: true
-      prune: true
-      allowEmpty: true
-
+      automated:
+        selfHeal: true
+        prune: true
+        allowEmpty: true
