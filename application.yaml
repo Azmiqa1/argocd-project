@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Azmiqa1/helm-project.git
+    repoURL: https://github.com/Azmiqa1/argo-project.git
     targetRevision: HEAD
     path: project/hello
   destination:
