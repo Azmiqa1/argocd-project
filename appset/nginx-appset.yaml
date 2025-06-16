@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Azmiqa1/argo-project.git
+    repoURL: https://github.com/Azmiqa1/argo-workflow-project.git
     targetRevision: HEAD
     path: .
   destination:
